@@ -19,11 +19,6 @@ def stream():
     return flask.Response(read_process(), mimetype='text/plain')
 
 
-@app.route('/report')
-def report():
-    return render_template('/home/ubuntu/visage/acceptance_tests/build/reports/report.html', title='report')
-
-
 @app.route('/status')
 def status():
     return {"Message": "ok"}, 200
