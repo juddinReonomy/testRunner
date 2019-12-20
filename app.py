@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 @app.route('/stream')
 def stream():
     g = proc.Group()
-    p = g.run(["bash", "-c", "cd ~/visage/acceptance_tests/command_files; pwd"])
+    p = g.run(["bash", "-c", "cd ~/visage/acceptance_tests/command_files/; bundle exec cucumber BROWSER='headless-chrome'"])
 
     def read_process():
         while g.is_pending():
