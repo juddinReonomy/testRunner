@@ -18,6 +18,11 @@ def stream():
     return flask.Response(read_process(), mimetype='text/plain')
 
 
+@app.route('/report')
+def report():
+    return app.send_static_file('/home/ubuntu/visage/acceptance_tests/build/reports/report.html')
+
+
 @app.route('/status')
 def status():
     return {"Message": "ok"}, 200
