@@ -1,4 +1,5 @@
 import flask
+from flask import render_template
 from shelljob import proc
 
 app = flask.Flask(__name__)
@@ -20,7 +21,7 @@ def stream():
 
 @app.route('/report')
 def report():
-    return app.send_static_file('/home/ubuntu/visage/acceptance_tests/build/reports/report.html')
+    return render_template('/home/ubuntu/visage/acceptance_tests/build/reports/report.html', title='report')
 
 
 @app.route('/status')
