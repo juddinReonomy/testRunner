@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="1" errors="0" skipped="0" tests="21" time="207.068819" name="Property search on Reonomy">
+<testcase classname="Property search on Reonomy" name="property search using city and state only (outline example : | Astoria | NY | 40 |)" time="8.529448">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using city and state only (outline example : | Alexander City | AL | 30 |)" time="10.253756">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using city and state only (outline example : | Berkeley | CA | 40 |)" time="10.929584">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using city and state only (outline example : | Hartford | CT | 20 |)" time="10.863003">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="search only using filters" time="1.337904">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using street name only (outline example : | Main Street | 40 |)" time="10.365963">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using street name only (outline example : | ChestNut Street | 30 |)" time="6.269363">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using street name only (outline example : | Pine Street | 40 |)" time="5.779789">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using county name only (outline example : | Queens | 40 |)" time="10.351820">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using county name only (outline example : | Philadelphia | 30 |)" time="18.977072">
+  <failure message="failed property search using county name only (outline example : | Philadelphia | 30 |)" type="failed">
+    <![CDATA[Scenario Outline: property search using county name only
+
+Example row: | Philadelphia | 30 |
+
+Message:
+]]>
+    <![CDATA[expected #has_css?("#summary-cards-list-container") to return true, got false (RSpec::Expectations::ExpectationNotMetError)
+./features/step_definitions/property_information.rb:179:in `/^I should see search result at least more than "([^"]*)"$/'
+features/regression/property_search.feature:49:in `Then I should see search result at least more than "30"'
+features/regression/property_search.feature:44:in `Then I should see search result at least more than "<min_expected_search_result_count>"']]>
+  </failure>
+  <system-out>
+    <![CDATA["An error occured while visiting: disconnected: Unable to receive message from renderer\n  (Session info: chrome=79.0.3945.79)"
+]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using county name only (outline example : | Los Angeles | 40 |)" time="15.129209">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using neighborhood only (outline example : | South Beach | 40 |)" time="8.856126">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using neighborhood only (outline example : | SoHo | 30 |)" time="8.002674">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using neighborhood only (outline example : | Hollywood | 2 |)" time="6.084691">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using owners name (outline example : | Adam | 40 |)" time="9.918164">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using owners name (outline example : | Thomas | 30 |)" time="9.419297">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using owners name (outline example : | David | 40 |)" time="9.812833">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using tenants name (outline example : | Adam | 40 |)" time="10.161695">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using tenants name (outline example : | Thomas | 30 |)" time="9.255769">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="property search using tenants name (outline example : | David | 40 |)" time="11.242264">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Property search on Reonomy" name="Recent searches should list recently searched properties" time="15.528395">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+</testsuite>

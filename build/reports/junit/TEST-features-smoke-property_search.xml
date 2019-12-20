@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0" errors="0" skipped="0" tests="14" time="125.646840" name="Make a search on Reonomy">
+<testcase classname="Make a search on Reonomy" name="property search using city and state only (outline example : | Astoria | NY | 40 |)" time="9.754643">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using city and state only (outline example : | Alexander City | AL | 30 |)" time="9.025715">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using city and state only (outline example : | Berkeley | CA | 40 |)" time="9.159143">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using city and state only (outline example : | Hartford | CT | 20 |)" time="9.499854">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="search only using filters" time="3.244287">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using street name only (outline example : | Main Street | 40 |)" time="9.634903">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using street name only (outline example : | ChestNut Street | 30 |)" time="7.934586">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using street name only (outline example : | Pine Street | 40 |)" time="7.482337">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using county name only (outline example : | Queens | 40 |)" time="10.374744">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using county name only (outline example : | Philadelphia | 30 |)" time="10.377155">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using county name only (outline example : | Los Angeles | 40 |)" time="10.748322">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using neighborhood only (outline example : | South Beach | 40 |)" time="9.558120">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using neighborhood only (outline example : | SoHo | 30 |)" time="10.070718">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+<testcase classname="Make a search on Reonomy" name="property search using neighborhood only (outline example : | Hollywood | 40 |)" time="8.782313">
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testcase>
+</testsuite>
