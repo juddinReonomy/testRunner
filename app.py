@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 @app.route('/stream')
 def stream():
     g = proc.Group()
-    p = g.run(["bash", "-c", "which ~/visage/acceptance_tests/command_files/docker-parallel-run.sh"])
+    p = g.run(["bash", "-c", "/home/ubuntu/visage/acceptance_tests/command_files/docker-parallel-run.sh"])
 
     def read_process():
         while g.is_pending():
