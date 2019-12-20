@@ -15,7 +15,12 @@ def stream():
             for proc, line in lines:
                 yield line
 
-    return flask.Response(read_process(), status=201, mimetype='text/plain')
+    return flask.Response(read_process(), mimetype='text/plain')
+
+
+@app.route('/status')
+def status():
+    return {"Message": "ok"}, 200
 
 
 if __name__ == "__main__":
