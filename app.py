@@ -24,5 +24,10 @@ def status():
     return {"Message": "ok"}, 200
 
 
+@app.route('/report')
+def report():
+    return render_template("report.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
