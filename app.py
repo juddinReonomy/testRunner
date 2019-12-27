@@ -5,7 +5,7 @@ from shelljob import proc
 app = flask.Flask(__name__)
 
 
-@app.route('/stream')
+@app.route('/run_on_prod')
 def stream():
     g = proc.Group()
     p = g.run(["bash", "-c", "/home/ubuntu/visage/acceptance_tests/command_files/cucumber-command-prod.sh"])
