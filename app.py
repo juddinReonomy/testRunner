@@ -48,7 +48,7 @@ def index():
         print
         "process return code:", ret_code
 
-    return flask.Response(inner(), mimetype='text/plain')
+    return flask.Response(inner(), mimetype='text/html')
 
 
 @app.route('/report')
