@@ -56,5 +56,10 @@ def report():
     return render_template("report.html")
 
 
+@app.route('/status')
+def status():
+    return {"Message": "ok"}, 200
+
+
 http_server = WSGIServer(('', 5000), app)
 http_server.serve_forever()
