@@ -1,7 +1,9 @@
-from select import select
-from wsgiref.simple_server import WSGIServer
+
 import flask
 import subprocess
+
+from gevent.pywsgi import WSGIServer
+from gevent.select import select
 
 app = flask.Flask(__name__)
 
