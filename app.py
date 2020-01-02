@@ -1,6 +1,5 @@
+from select import select
 from wsgiref.simple_server import WSGIServer
-
-from gevent.select import select
 import flask
 import subprocess
 
