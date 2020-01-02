@@ -7,7 +7,7 @@ import subprocess
 app = flask.Flask(__name__)
 
 
-@app.route('/yield')
+@app.route('/prod-smoke')
 def index():
     def inner():
         proc = subprocess.Popen(
