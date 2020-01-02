@@ -1,9 +1,6 @@
-
+from gevent.select import select
 import flask
 import subprocess
-
-from gevent.pywsgi import WSGIServer
-from gevent.select import select
 
 app = flask.Flask(__name__)
 
@@ -12,12 +9,13 @@ app = flask.Flask(__name__)
 def index():
     def inner():
         proc = subprocess.Popen(
-            ['/home/ubuntu/visage/acceptance_tests/command_files/cucumber-command-prod.sh'],
+            ["/home/ubuntu/visage/acceptance_tests/command_files/cucumber-command-prod.sh"],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
         )
         # pass data until client disconnects, then terminate
+        # see https://stackoverflow.com/questions/18511119/stop-processing-flask-route-if-request-aborted
         try:
             awaiting = [proc.stdout, proc.stderr]
             while awaiting:
@@ -52,30 +50,8 @@ def index():
     return flask.Response(inner(), mimetype='text/html')
 
 
-http_server = WSGIServer(('', 5000), app)
-http_server.serve_forever()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
 # import flask
 # from flask import render_template
 # from shelljob import proc
