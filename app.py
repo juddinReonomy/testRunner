@@ -1,4 +1,5 @@
 from gevent.select import select
+from gevent.wsgi import WSGIServer
 import flask
 import subprocess
 
@@ -9,7 +10,7 @@ app = flask.Flask(__name__)
 def index():
     def inner():
         proc = subprocess.Popen(
-            ["/home/ubuntu/visage/acceptance_tests/command_files/cucumber-command-prod.sh"],
+            ['tail -f ./log'],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
@@ -50,8 +51,8 @@ def index():
     return flask.Response(inner(), mimetype='text/html')
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+http_server = WSGIServer(('', 5000), app)
+http_server.serve_forever()
 # import flask
 # from flask import render_template
 # from shelljob import proc
