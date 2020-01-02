@@ -1,3 +1,4 @@
+from flask import render_template
 from gevent.select import select
 from gevent.wsgi import WSGIServer
 import flask
@@ -16,7 +17,6 @@ def index():
             stderr=subprocess.PIPE
         )
         # pass data until client disconnects, then terminate
-        # see https://stackoverflow.com/questions/18511119/stop-processing-flask-route-if-request-aborted
         try:
             awaiting = [proc.stdout, proc.stderr]
             while awaiting:
@@ -51,38 +51,10 @@ def index():
     return flask.Response(inner(), mimetype='text/html')
 
 
+@app.route('/report')
+def report():
+    return render_template("report.html")
+
+
 http_server = WSGIServer(('', 5000), app)
 http_server.serve_forever()
-# import flask
-# from flask import render_template
-# from shelljob import proc
-#
-# app = flask.Flask(__name__)
-#
-#
-# @app.route('/run_on_prod')
-# def stream():
-#     g = proc.Group()
-#     p = g.run(["bash", "-c", "/home/ubuntu/visage/acceptance_tests/command_files/cucumber-command-prod.sh"])
-#
-#     def read_process():
-#         while g.is_pending():
-#             lines = g.readlines()
-#             for proc, line in lines:
-#                 yield line
-#
-#     return flask.Response(read_process(), mimetype='text/plain')
-#
-#
-# @app.route('/status')
-# def status():
-#     return {"Message": "ok"}, 200
-#
-#
-# @app.route('/report')
-# def report():
-#     return render_template("report.html")
-#
-#
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0')
