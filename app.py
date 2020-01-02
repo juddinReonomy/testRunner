@@ -10,7 +10,7 @@ app = flask.Flask(__name__)
 def index():
     def inner():
         proc = subprocess.Popen(
-            ['tail -f ./log'],
+            ['/home/ubuntu/visage/acceptance_tests/command_files/cucumber-command-prod.sh'],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
