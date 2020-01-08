@@ -1,6 +1,6 @@
 from flask import render_template
 from gevent.select import select
-
+import requests
 import flask
 import subprocess
 
@@ -15,7 +15,7 @@ def index():
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
              '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
              'install; cd /home/ubuntu/visage/acceptance_tests/; bundle exec cucumber TEST_ENV=prod '
-             'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
+             'BROWSER=headless-chrome --tags @profile -f pretty -f html -o '
              '/home/ubuntu/testRunner/templates/report.html'],
             shell=True,
             stdout=subprocess.PIPE,
@@ -54,6 +54,13 @@ def index():
         "process return code:", ret_code
 
     return flask.Response(inner(), mimetype='text/html')
+
+    url = 'https://hooks.slack.com/services/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'
+    message = {'text': 'visit for test result: http://prd-qa.internal.reonomy.com:5000/report'}
+    res = requests.post(url, data=message, headers={'Content-type: application/json'})
+    print
+    'response from server:', res.text
+    dictFromServer = res.json()
 
 
 @app.route('/report')
