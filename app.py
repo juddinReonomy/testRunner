@@ -1,6 +1,6 @@
 from flask import render_template
 from gevent.select import select
-from gevent.wsgi import WSGIServer
+
 import flask
 import subprocess
 
@@ -11,7 +11,8 @@ app = flask.Flask(__name__)
 def index():
     def inner():
         proc = subprocess.Popen(
-            ['/home/ubuntu/visage/acceptance_tests/command_files/cucumber-command-prod.sh'],
+            ['cd /home/ubuntu/visage/acceptance_tests/; git pll; cd /home/ubuntu/testRunner; git pull; cd '
+             '/home/ubuntu/visage/acceptance_tests; bundle install'],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
@@ -61,5 +62,5 @@ def status():
     return {"Message": "ok"}, 200
 
 
-http_server = WSGIServer(('', 5000), app)
-http_server.serve_forever()
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
