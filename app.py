@@ -12,7 +12,8 @@ def index():
     def inner():
         proc = subprocess.Popen(
             ['cd /home/ubuntu/visage/acceptance_tests/; git pull; cd /home/ubuntu/testRunner; git pull; cd '
-             '/home/ubuntu/visage/acceptance_tests; bundle install'],
+             '/home/ubuntu/visage/acceptance_tests; bundle install; bundle exec cucumber TEST_ENV="prod" '
+             'BROWSER="headless-chrome" --tags @profile  -f pretty -f html -o templates/report.html'],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
