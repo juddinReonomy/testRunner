@@ -56,16 +56,6 @@ def index():
     return flask.Response(inner(), mimetype='text/html')
 
 
-@app.route('/send_report')
-def send_report():
-    url = 'https://hooks.slack.com/services/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'
-    message = {'text': 'visit for test result: http://prd-qa.internal.reonomy.com:5000/report'}
-    res = requests.post(url, data=message, headers={'Content-type: application/json'})
-    print
-    'response from server:', res.text
-    dictFromServer = res.json()
-
-
 @app.route('/report')
 def report():
     return render_template("report.html")
@@ -77,4 +67,4 @@ def status():
 
 
 if __name__ == "__main__":
-    app.run(threaded=True, host='0.0.0.0')
+    app.run(host='0.0.0.0')
