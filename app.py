@@ -14,7 +14,8 @@ def index():
             ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
              '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
-             'install; cd /home/ubuntu/visage/acceptance_tests/; pwd'],
+             'install; cd /home/ubuntu/visage/acceptance_tests/; bundle exec cucumber TEST_ENV=prod '
+             'BROWSER=headless-chrome --tags @profile'],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
