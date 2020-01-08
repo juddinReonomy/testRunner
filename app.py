@@ -11,8 +11,10 @@ app = flask.Flask(__name__)
 def index():
     def inner():
         proc = subprocess.Popen(
-            ['cd /home/ubuntu/visage/acceptance_tests/; git pull; cd /home/ubuntu/testRunner; git pull; cd '
-             '/home/ubuntu/visage/acceptance_tests; bundle install'],
+            ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
+             '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
+             '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
+             'install'],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
