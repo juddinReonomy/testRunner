@@ -11,7 +11,7 @@ app = flask.Flask(__name__)
 def index():
     def inner():
         proc = subprocess.Popen(
-            ['cd /home/ubuntu/visage/acceptance_tests/; git pll; cd /home/ubuntu/testRunner; git pull; cd '
+            ['cd /home/ubuntu/visage/acceptance_tests/; git pull; cd /home/ubuntu/testRunner; git pull; cd '
              '/home/ubuntu/visage/acceptance_tests; bundle install'],
             shell=True,
             stdout=subprocess.PIPE,
