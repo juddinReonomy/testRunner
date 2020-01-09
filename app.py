@@ -13,7 +13,8 @@ def index():
         ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
          '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
          '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
-         'install; cd /home/ubuntu/visage/acceptance_tests/; bundle exec cucumber TEST_ENV=prod '
+         'install; cd /home/ubuntu/visage/acceptance_tests/;rm /home/ubuntu/testRunner/templates/report.html; bundle '
+         'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
          '/home/ubuntu/testRunner/templates/report.html'],
         shell=True,
@@ -21,6 +22,15 @@ def index():
         stderr=subprocess.PIPE
     )
     return "Production post validation test is running..."
+
+
+payload = "{\"text\":\"Test started after production release Check Report: " \
+          "http://prd-qa.internal.reonomy.com:5000/report after 6 Minutes\"} "
+headers = {
+    'Content-Type': 'application/json'
+}
+response = requests.request('POST', 'https://hooks.slack.com/services/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',
+                            headers=headers, data=payload)
 
 
 @app.route('/prod-smoke_manual_visit')
