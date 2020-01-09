@@ -21,16 +21,15 @@ def index():
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
-    return "Production post validation test is running..."
-
-
-payload = "{\"text\":\"Test started after production release Check Report: " \
-          "http://prd-qa.internal.reonomy.com:5000/report after 6 Minutes\"} "
-headers = {
-    'Content-Type': 'application/json'
-}
-response = requests.request('POST', 'https://hooks.slack.com/services/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',
-                            headers=headers, data=payload)
+    # slack message send
+    payload = "{\"text\":\"Test started after production release Check Report: " \
+              "http://prd-qa.internal.reonomy.com:5000/report after 6 Minutes\"} "
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    response = requests.request('POST', 'provide_webwook_url',
+                                headers=headers, data=payload)
+    return "Production post validation test is running...check slack channel #prod-tests"
 
 
 @app.route('/prod-smoke_manual_visit')
