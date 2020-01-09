@@ -29,7 +29,7 @@ payload = "{\"text\":\"Test started after production release Check Report: " \
 headers = {
     'Content-Type': 'application/json'
 }
-response = requests.request('POST', 'https://hooks.slack.com/services/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',
+response = requests.request('POST', 'https://hooks.slack.com/services/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',
                             headers=headers, data=payload)
 
 
