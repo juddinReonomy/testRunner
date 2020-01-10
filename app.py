@@ -3,10 +3,14 @@ from gevent.select import select
 import requests
 import flask
 import subprocess
+from datetime import datetime
+from pytz import timezone
 import os
 
 app = flask.Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+now = datetime.now(timezone('US/Eastern'))
+dt_time = now.strftime("%B-%d-%Y_%I-%M-%p")
 
 
 @app.route('/prod-smoke')
@@ -18,16 +22,17 @@ def index():
          'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-         '/home/ubuntu/testRunner/templates/report.html -f pretty -f json -o '
-         '/home/ubuntu/testRunner/templates/json_report.json'],
+         '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
+         '/home/ubuntu/testRunner/templates/json_report.json' % dt_time],
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
     # slack message send
-    payload = "{\"text\":\"Test started after production release Check Report: " \
-              "http://prd-qa.internal.reonomy.com:5000/report or " \
-              "http://prd-qa.internal.reonomy.com:5000/better_report after 6 Minutes\"} "
+    payload = "{\"text\":\"Test started after production release. Here is the Report: " \
+              "http://prd-qa.internal.reonomy.com:5000/%s_report after 10 seconds refresh browser to see progress" \
+              "it should take 5+ minutes to complete. Also checkout http://prd-qa.internal.reonomy.com:5000/history " \
+              "for past result\"} " % dt_time
     headers = {
         'Content-Type': 'application/json'
     }
@@ -46,8 +51,9 @@ def smoke_manual_visit():
              'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
              'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-             '/home/ubuntu/testRunner/templates/report.html -f pretty -f json -o '
-             '/home/ubuntu/testRunner/templates/json_report.json'],
+             '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f '
+             'json -o '
+             '/home/ubuntu/testRunner/templates/json_report.json' % dt_time],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
@@ -101,6 +107,33 @@ def better_report():
 @app.route('/status')
 def status():
     return {"Message": "ok"}, 200
+
+
+@app.route('/')
+def root():
+    return render_template("index.html")
+
+
+@app.route('/index')
+def index():
+    return render_template("index.html")
+
+
+@app.route('/<string:page_name>/')
+def render_static(page_name):
+    return render_template('%s.html' % page_name)
+
+
+@app.route('/history')
+def homepage():
+    path = os.getcwd() + "/templates"
+    list_of_files = {}
+
+    for filename in os.listdir(path):
+        if filename.endswith('.html'):
+            list_of_files[filename] = "http://prd-qa.internal.reonomy.com:5000/" + filename
+    # return list_of_files
+    return render_template('index.html', list_of_files=list_of_files)
 
 
 if __name__ == "__main__":
