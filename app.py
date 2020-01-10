@@ -42,7 +42,7 @@ def index():
 def smoke_manual_visit():
     def inner():
         now = datetime.now()
-        dt_time = now.strftime("%d/%m/%Y %H:%M:%S")
+        dt_time = now.strftime("%d_%m_%Y_%H_%M_%S")
         proc = subprocess.Popen(
             ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
