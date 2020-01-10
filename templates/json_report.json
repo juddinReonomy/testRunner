@@ -1,0 +1,6348 @@
+[
+  {
+    "uri": "features/regression/filters.feature",
+    "id": "filter-properties-on-reonomy",
+    "keyword": "Feature",
+    "name": "Filter properties on Reonomy",
+    "description": "  As a user\n  I want to be able to filter properties\n  In order to find what i'm looking for",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 638429000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6706250000
+            }
+          }
+        ]
+      },
+      {
+        "id": "filter-properties-on-reonomy;verify-that-filter-assets-type-commercial-general/misc-can-be-apply-to-search-property",
+        "keyword": "Scenario",
+        "name": "Verify that filter Assets type Commercial General/Misc can be apply to search property",
+        "description": "",
+        "line": 11,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 10
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 839622000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on filter",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:277"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360739000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on checkbox \"Commercial General/Misc.\" from asset type commercial",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:282"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1478296000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Assets: Commercial General/Misc.\" in the search label applied",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:299"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53172000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2414968000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104205000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1450978000
+            }
+          }
+        ]
+      },
+      {
+        "id": "filter-properties-on-reonomy;verify-that-filter-assets-type-office-can-be-apply-to-search-property",
+        "keyword": "Scenario",
+        "name": "Verify that filter Assets type Office can be apply to search property",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 18
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1073554000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on filter",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:277"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 412079000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on checkbox \"Office\" from asset type commercial",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:282"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1242253000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Assets: Office\" in the search label applied",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:299"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44647000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1456157000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107513000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1493396000
+            }
+          }
+        ]
+      },
+      {
+        "id": "filter-properties-on-reonomy;verify-that-filter-assets-type-hospitality-can-be-apply-to-search-property",
+        "keyword": "Scenario",
+        "name": "Verify that filter Assets type Hospitality can be apply to search property",
+        "description": "",
+        "line": 27,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 26
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1048837000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on filter",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:277"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220439000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on checkbox \"Hospitality\" from asset type commercial",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:282"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1412570000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Assets: Hospitality\" in the search label applied",
+            "line": 31,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:299"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43614000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2262320000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103345000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1470665000
+            }
+          }
+        ]
+      },
+      {
+        "id": "filter-properties-on-reonomy;verify-that-filter-assets-type-mixed-use-can-be-apply-to-search-property",
+        "keyword": "Scenario",
+        "name": "Verify that filter Assets type Mixed Use can be apply to search property",
+        "description": "",
+        "line": 35,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 34
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 36,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1030246000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on filter",
+            "line": 37,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:277"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 174717000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on checkbox \"Mixed Use\" from asset type commercial",
+            "line": 38,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:282"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1508633000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Assets: Mixed Use\" in the search label applied",
+            "line": 39,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:299"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47704000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 40,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2283509000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107987000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1521771000
+            }
+          }
+        ]
+      },
+      {
+        "id": "filter-properties-on-reonomy;verify-that-filter-assets-type-automotive-repair-shop-can-be-apply-to-search-property",
+        "keyword": "Scenario",
+        "name": "Verify that filter Assets type Automotive Repair Shop can be apply to search property",
+        "description": "",
+        "line": 43,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 42
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 44,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1230767000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on filter",
+            "line": 45,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:277"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 644767000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on checkbox \"Automotive Repair Shop\" from asset type commercial",
+            "line": 46,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:282"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 997550000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Assets: Automotive Repair Shop\" in the search label applied",
+            "line": 47,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:299"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42416000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 48,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2299491000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/regression/profile.feature",
+    "id": "user-profile-on-reonomy",
+    "keyword": "Feature",
+    "name": "User profile on Reonomy",
+    "description": "  As a user\n  I want to be able to make a changes to my profile information\n  In order to make the most out of Reonomy",
+    "line": 2,
+    "comments": [
+      {
+        "value": "#encoding: UTF-8",
+        "line": 1
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 7,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106907000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 9,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1560888000
+            }
+          }
+        ]
+      },
+      {
+        "id": "user-profile-on-reonomy;verify-user-profile",
+        "keyword": "Scenario",
+        "name": "Verify user profile",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 11
+          },
+          {
+            "name": "@profile",
+            "line": 11
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on my account page",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1081645000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"TrueOwner Unlocks Remaining Unlimited\" on the page",
+            "line": 15,
+            "comments": [
+              {
+                "value": "#profile",
+                "line": 14
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1638402000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Your Profile\" on within profile section",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62542000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Email\" on within profile section",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55812000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Company\" on within profile section",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80264000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"First Name\" on within profile section",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55157000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Last Name\" on within profile section",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58266000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Job Title\" on within profile section",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59994000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Role\" on within profile section",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58835000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Company Size\" on within profile section",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58148000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Interests\" on within profile section",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60228000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Geography\" on within profile section",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55423000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Asset Type\" on within profile section",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59114000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"What do you care about?\" on within profile section",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61522000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click \"Seat Management\" span",
+            "line": 29,
+            "comments": [
+              {
+                "value": "# seat management",
+                "line": 28
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 411982000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Seat Management\" on within subscriptions section",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1292751000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"User\" on within subscriptions section",
+            "line": 31,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43660000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"License\" on within subscriptions section",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51695000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"You can contact sales at 646 882 6260 or sales@reonomy.com.\" on within subscriptions section",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66758000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click \"Password\" span",
+            "line": 35,
+            "comments": [
+              {
+                "value": "#password",
+                "line": 34
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 645647000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Current Password\" on within password section",
+            "line": 36,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90760000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"New Password\" on within password section",
+            "line": 37,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29321000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Confirm New Password\" on within password section",
+            "line": 38,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27942000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Change Password\" on within password section",
+            "line": 39,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34535000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click \"Billing\" span",
+            "line": 41,
+            "comments": [
+              {
+                "value": "# billing",
+                "line": 40
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 874946000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see \"Please email billing@reonomy.com or call 646-933-6039 if you need help updating your billing information or support@reonomy.com or call 646-933-6037 if you have questions about your account.\" on the page",
+            "line": 42,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 315564000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click \"Exports\" span",
+            "line": 45,
+            "comments": [
+              {
+                "value": "# exports",
+                "line": 44
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 172178000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Date\" on within export section",
+            "line": 46,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 462563000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Properties\" on within export section",
+            "line": 47,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29310000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Status\" on within export section",
+            "line": 48,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27864000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"No Exports\" on within export section",
+            "line": 49,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29820000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/regression/property_information.feature",
+    "id": "property-information-on-reonomy",
+    "keyword": "Feature",
+    "name": "Property information on Reonomy",
+    "description": "  As a user\n  I want to be able to see property information\n  In order to find what I'm looking for",
+    "line": 2,
+    "comments": [
+      {
+        "value": "#encoding: UTF-8",
+        "line": 1
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 7,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 135827000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 9,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2441006000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-information-on-reonomy;verify-that-user-can-search-for-an-address-and-see-details-on-their-property",
+        "keyword": "Scenario",
+        "name": "verify that user can search for an address and see details on their property",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 11
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2349130000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I search for \"3418 Northern Blvd, Long Island City, NY 11101\"",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301519000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"APN: 00214-0249\" on the page",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1868355000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should be in building & lot section by default",
+            "line": 18,
+            "comments": [
+              {
+                "value": "# building",
+                "line": 17
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18287000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see the following text in the card labelled \"Building\"",
+            "line": 19,
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Year built"
+                ]
+              },
+              {
+                "cells": [
+                  "Year renovated"
+                ]
+              },
+              {
+                "cells": [
+                  "Stories"
+                ]
+              },
+              {
+                "cells": [
+                  "Number of Buildings"
+                ]
+              },
+              {
+                "cells": [
+                  "Existing Floor Area Ratio"
+                ]
+              },
+              {
+                "cells": [
+                  "Residential Units"
+                ]
+              },
+              {
+                "cells": [
+                  "Total Units"
+                ]
+              },
+              {
+                "cells": [
+                  "Building Area"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 172782000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see the following text in the card labelled \"Lot\"",
+            "line": 32,
+            "comments": [
+              {
+                "value": "# Lot",
+                "line": 31
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Asset Type"
+                ]
+              },
+              {
+                "cells": [
+                  "Lot Area Acres"
+                ]
+              },
+              {
+                "cells": [
+                  "Zoning"
+                ]
+              },
+              {
+                "cells": [
+                  "Depth"
+                ]
+              },
+              {
+                "cells": [
+                  "Frontage"
+                ]
+              },
+              {
+                "cells": [
+                  "Census Tract"
+                ]
+              },
+              {
+                "cells": [
+                  "Opportunity Zone"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163064000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see the following text in the card labelled \"Location\"",
+            "line": 43,
+            "comments": [
+              {
+                "value": "#location",
+                "line": 42
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Metropolitan Statistical Area"
+                ]
+              },
+              {
+                "cells": [
+                  "County"
+                ]
+              },
+              {
+                "cells": [
+                  "Municipality"
+                ]
+              },
+              {
+                "cells": [
+                  "Minor Civil Division"
+                ]
+              },
+              {
+                "cells": [
+                  "Neighborhood"
+                ]
+              },
+              {
+                "cells": [
+                  "Legal"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100065000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click on the ownership tab",
+            "line": 53,
+            "comments": [
+              {
+                "value": "# Ownership",
+                "line": 52
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101391000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the following text in the card labelled \"Ownership\"",
+            "line": 54,
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Ownership"
+                ]
+              },
+              {
+                "cells": [
+                  "Reported Owner"
+                ]
+              },
+              {
+                "cells": [
+                  "In-State Owner"
+                ]
+              },
+              {
+                "cells": [
+                  "Mailing Address"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89140000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click on the tenants tab",
+            "line": 62,
+            "comments": [
+              {
+                "value": "# tenants",
+                "line": 61
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114804000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the following text in the card labelled \"Current Tenants\"",
+            "line": 63,
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Current Tenants"
+                ]
+              },
+              {
+                "cells": [
+                  "Business Name"
+                ]
+              },
+              {
+                "cells": [
+                  "Street Address"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 472125000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click on the sales tab",
+            "line": 70,
+            "comments": [
+              {
+                "value": "# sales",
+                "line": 69
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104140000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the following text in the card labelled \"Recorded Sales\"",
+            "line": 71,
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Recorded Date"
+                ]
+              },
+              {
+                "cells": [
+                  "Buyer"
+                ]
+              },
+              {
+                "cells": [
+                  "Seller"
+                ]
+              },
+              {
+                "cells": [
+                  "Sale Price"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152008000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click on the debt tab",
+            "line": 79,
+            "comments": [
+              {
+                "value": "# debt",
+                "line": 78
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83318000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the following text in the card labelled \"Mortgage Records\"",
+            "line": 80,
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Mortgage Records"
+                ]
+              },
+              {
+                "cells": [
+                  "Date"
+                ]
+              },
+              {
+                "cells": [
+                  "Maturity Date"
+                ]
+              },
+              {
+                "cells": [
+                  "Lender(s)"
+                ]
+              },
+              {
+                "cells": [
+                  "Amount"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 203037000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click on the tax tab",
+            "line": 89,
+            "comments": [
+              {
+                "value": "#tax",
+                "line": 88
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107299000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the following text in the card labelled \"Tax Data\"",
+            "line": 90,
+            "rows": [
+              {
+                "cells": [
+                  "text"
+                ]
+              },
+              {
+                "cells": [
+                  "Tax Amount"
+                ]
+              },
+              {
+                "cells": [
+                  "YoY Change in Tax Amount"
+                ]
+              },
+              {
+                "cells": [
+                  "Assessed Land Value"
+                ]
+              },
+              {
+                "cells": [
+                  "Assessed Improvement Value"
+                ]
+              },
+              {
+                "cells": [
+                  "Total Assessed Value"
+                ]
+              },
+              {
+                "cells": [
+                  "Land Market Value"
+                ]
+              },
+              {
+                "cells": [
+                  "Improvements Market Value"
+                ]
+              },
+              {
+                "cells": [
+                  "Total Market Value"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 278746000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click on the notes tab",
+            "line": 102,
+            "comments": [
+              {
+                "value": "#note",
+                "line": 101
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105042000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see text field for entering notes",
+            "line": 103,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14419000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see property map",
+            "line": 106,
+            "comments": [
+              {
+                "value": "#Map",
+                "line": 105
+              }
+            ],
+            "output": [
+              "did not check for property map in prod. pending --test"
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see property google image",
+            "line": 107,
+            "output": [
+              "did not check for google image in prod. pending --test"
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the label icon",
+            "line": 109,
+            "comments": [
+              {
+                "value": "#label",
+                "line": 108
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10889000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the comps icon",
+            "line": 111,
+            "comments": [
+              {
+                "value": "#comps",
+                "line": 110
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12080000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the print icon",
+            "line": 113,
+            "comments": [
+              {
+                "value": "#print",
+                "line": 112
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12912000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the new tab icon",
+            "line": 115,
+            "comments": [
+              {
+                "value": "#openTab",
+                "line": 114
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12130000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result is more than 0",
+            "line": 118,
+            "comments": [
+              {
+                "value": "# result should be more than 5000",
+                "line": 117
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:160"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20478000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 7,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104297000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 9,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2896125000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-information-on-reonomy;search-with-zip-code-only",
+        "keyword": "Scenario",
+        "name": "Search with zip code only",
+        "description": "",
+        "line": 121,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 120
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 122,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 805327000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I search for \"94016\"",
+            "line": 123,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 781631000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see export option",
+            "line": 126,
+            "comments": [
+              {
+                "value": "# export",
+                "line": 125
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 787122000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on export card",
+            "line": 127,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94675000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Export properties up to\" within export card container",
+            "line": 128,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34965000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Unlock TrueOwner\" within export card container",
+            "line": 129,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28023000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Only export properties with TrueOwner names\" within export card container",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23060000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Break out TrueOwner names into a separate list\" within export card container",
+            "line": 131,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22243000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I click out of the modal to close it",
+            "line": 132,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:143"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90894000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see label option",
+            "line": 135,
+            "comments": [
+              {
+                "value": "# label",
+                "line": 134
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38169000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on label card",
+            "line": 136,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:138"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2083232000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Label properties up to\" within label card container",
+            "line": 137,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43559000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I click out of the modal to close it",
+            "line": 138,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:143"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48225000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see more dropdown",
+            "line": 141,
+            "comments": [
+              {
+                "value": "# More",
+                "line": 140
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:151"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13158000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on more dropdown",
+            "line": 142,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 321070000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Unlock TrueOwners\" within more card container",
+            "line": 143,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52841000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Create report\" within more card container",
+            "line": 144,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18944000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see \"Jump to page\" within more card container",
+            "line": 145,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22832000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result is more than 1",
+            "line": 148,
+            "comments": [
+              {
+                "value": "# result should be more than 1",
+                "line": 147
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:160"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18648000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/regression/property_search.feature",
+    "id": "property-search-on-reonomy",
+    "keyword": "Feature",
+    "name": "Property search on Reonomy",
+    "description": "  As a user\n  I want to be able to make a property search\n  In order to find what i'm looking for",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109646000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2891929000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-city-and-state-only;;2",
+        "keyword": "Scenario Outline",
+        "name": "property search using city and state only",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 10
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1045659000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter City \"Astoria\" and State \"NY\" in location section",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 930526000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 15,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 14
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2202796000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104012000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2074041000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-city-and-state-only;;3",
+        "keyword": "Scenario Outline",
+        "name": "property search using city and state only",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 10
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1362451000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter City \"Alexander City\" and State \"AL\" in location section",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1071721000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 15,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 14
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384756000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104170000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2817603000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-city-and-state-only;;4",
+        "keyword": "Scenario Outline",
+        "name": "property search using city and state only",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 10
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 940115000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter City \"Berkeley\" and State \"CA\" in location section",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1026875000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 15,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 14
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1456999000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104349000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2148642000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-city-and-state-only;;5",
+        "keyword": "Scenario Outline",
+        "name": "property search using city and state only",
+        "description": "",
+        "line": 22,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 10
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1353098000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter City \"Hartford\" and State \"CT\" in location section",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1068243000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 15,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 14
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1322604000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105117000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2154026000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-street-name-only;;2",
+        "keyword": "Scenario Outline",
+        "name": "property search using street name only",
+        "description": "",
+        "line": 36,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 27
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1302462000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter street name \"Main Street\" in location section",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:202"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 956373000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 32,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 31
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2320556000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103959000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2523222000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-street-name-only;;3",
+        "keyword": "Scenario Outline",
+        "name": "property search using street name only",
+        "description": "",
+        "line": 37,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 27
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1132142000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter street name \"ChestNut Street\" in location section",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:202"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 940029000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 32,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 31
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1022027000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106541000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2767679000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-street-name-only;;4",
+        "keyword": "Scenario Outline",
+        "name": "property search using street name only",
+        "description": "",
+        "line": 38,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 27
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 941150000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter street name \"Pine Street\" in location section",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:202"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 894807000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 32,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 31
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1280619000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107660000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2583814000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-county-name-only;;2",
+        "keyword": "Scenario Outline",
+        "name": "property search using county name only",
+        "description": "",
+        "line": 49,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 40
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 42,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1002968000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter county name \"Queens\" in location section",
+            "line": 43,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:210"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 897384000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 45,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 44
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1489335000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105801000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2755827000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-county-name-only;;3",
+        "keyword": "Scenario Outline",
+        "name": "property search using county name only",
+        "description": "",
+        "line": 50,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 40
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 42,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1097357000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter county name \"Philadelphia\" in location section",
+            "line": 43,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:210"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 904669000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 45,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 44
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1382871000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103967000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2508323000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-county-name-only;;4",
+        "keyword": "Scenario Outline",
+        "name": "property search using county name only",
+        "description": "",
+        "line": 51,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 40
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 42,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1363569000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter county name \"Los Angeles\" in location section",
+            "line": 43,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:210"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 734826000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 45,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 44
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1797939000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105317000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2130574000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-neighborhood-only;;2",
+        "keyword": "Scenario Outline",
+        "name": "property search using neighborhood only",
+        "description": "",
+        "line": 62,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 53
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 55,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1519789000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter neighborhood name \"South Beach\" in location section",
+            "line": 56,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:236"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 621219000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 58,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 57
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1423588000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106736000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2167006000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-neighborhood-only;;3",
+        "keyword": "Scenario Outline",
+        "name": "property search using neighborhood only",
+        "description": "",
+        "line": 63,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 53
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 55,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1598173000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter neighborhood name \"SoHo\" in location section",
+            "line": 56,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:236"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 808198000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 58,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 57
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2088245000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106333000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2840420000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-neighborhood-only;;4",
+        "keyword": "Scenario Outline",
+        "name": "property search using neighborhood only",
+        "description": "",
+        "line": 64,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 53
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 55,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1097725000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter neighborhood name \"Hollywood\" in location section",
+            "line": 56,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:236"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 988620000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"2\"",
+            "line": 58,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 57
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 785387000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105485000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2146692000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-owners-name;;2",
+        "keyword": "Scenario Outline",
+        "name": "property search using owners name",
+        "description": "",
+        "line": 75,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 66
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 68,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1077243000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter owner name \"Adam\" in ownership section",
+            "line": 69,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:218"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1004609000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 71,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 70
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2432338000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106722000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2829713000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-owners-name;;3",
+        "keyword": "Scenario Outline",
+        "name": "property search using owners name",
+        "description": "",
+        "line": 76,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 66
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 68,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1144357000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter owner name \"Thomas\" in ownership section",
+            "line": 69,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:218"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1098118000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 71,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 70
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2458967000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104020000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2271909000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-owners-name;;4",
+        "keyword": "Scenario Outline",
+        "name": "property search using owners name",
+        "description": "",
+        "line": 77,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 66
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 68,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2473288000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter owner name \"David\" in ownership section",
+            "line": 69,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:218"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 423353000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 71,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 70
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2497387000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103833000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2211366000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-tenants-name;;2",
+        "keyword": "Scenario Outline",
+        "name": "property search using tenants name",
+        "description": "",
+        "line": 88,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 79
+          },
+          {
+            "name": "@search",
+            "line": 79
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 81,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1078220000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter tenants name \"Adam\" in tenants section",
+            "line": 82,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:227"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1040926000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 84,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 83
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2515000000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106507000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2857130000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-tenants-name;;3",
+        "keyword": "Scenario Outline",
+        "name": "property search using tenants name",
+        "description": "",
+        "line": 89,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 79
+          },
+          {
+            "name": "@search",
+            "line": 79
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 81,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 976049000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter tenants name \"Thomas\" in tenants section",
+            "line": 82,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:227"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1109543000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 84,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 83
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1530060000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106356000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2858782000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;property-search-using-tenants-name;;4",
+        "keyword": "Scenario Outline",
+        "name": "property search using tenants name",
+        "description": "",
+        "line": 90,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 79
+          },
+          {
+            "name": "@search",
+            "line": 79
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 81,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1115781000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter tenants name \"David\" in tenants section",
+            "line": 82,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:227"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1007525000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 84,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 83
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1703876000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104350000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3197014000
+            }
+          }
+        ]
+      },
+      {
+        "id": "property-search-on-reonomy;recent-searches-should-list-recently-searched-properties",
+        "keyword": "Scenario",
+        "name": "Recent searches should list recently searched properties",
+        "description": "",
+        "line": 94,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 93
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on national search",
+            "line": 95,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 971841000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter City \"Des Moines\" and State \"IA\" in location section",
+            "line": 96,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1003842000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"10\"",
+            "line": 98,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 97
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1380563000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 99,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 632123000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see recent search card displayed having content \"City: Des Moines\"",
+            "line": 100,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:272"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 851729000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I should see recent search card displayed having content \"State: IA\"",
+            "line": 101,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:272"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 294540000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/regression/sort_result.feature",
+    "id": "sort-results-on-reonomy",
+    "keyword": "Feature",
+    "name": "Sort results on Reonomy",
+    "description": "  As a user\n  I want to be able to Sort a search result\n  In order to find what i'm looking for",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105776000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2192601000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1356071000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 736818000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;2",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 317560000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1458530000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Building area\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1648565000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105838000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2678079000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1352694000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 662887000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;3",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 22,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 343539000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1413486000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Asset type\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1606697000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105037000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2942305000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1061539000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 780771000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;4",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 23,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 341594000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1412319000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Mortgage amount\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1673807000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105066000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2811012000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2186837000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116900000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;5",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 24,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 338070000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1390903000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Last mortgage date\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1599948000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105159000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2773520000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 988402000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 743596000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;6",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 25,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 339879000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1449567000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Last sale date\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1645797000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104596000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2236520000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1393237000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 519684000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;7",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 26,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 518805000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1486669000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Lenders\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1656148000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104501000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2962921000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1369861000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 484080000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;8",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 27,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 517499000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2035139000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Sales price\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1582079000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103945000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2281484000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1360405000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 669576000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;9",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 28,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 353775000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1402421000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Total units\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1614848000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104284000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2853240000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1103497000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 388110000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;10",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 29,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 649319000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1407093000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Year built\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1037463000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112833000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2867854000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1106532000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 730086000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;11",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 30,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 333336000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1389697000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Year renovated\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1645689000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109228000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2530100000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1162155000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 730096000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;12",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 31,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 405371000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1402253000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Tax year\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1595723000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "login & go to national search",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104411000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I visit reonomy login page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I login as an admin",
+            "line": 8,
+            "output": [
+              "already logged in"
+            ],
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2845364000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I am on national search",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1104035000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I open the search filter",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 483637000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sort-results-on-reonomy;verify-that-sorting-of-a-search-result-works;;13",
+        "keyword": "Scenario Outline",
+        "name": "Verify that sorting of a search result works",
+        "description": "",
+        "line": 32,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@production",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I enter City \"New York\" and State \"NY\" in location section",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 559032000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see search result at least more than \"1\"",
+            "line": 16,
+            "comments": [
+              {
+                "value": "# checks only first page result",
+                "line": 15
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/property_information.rb:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1474478000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I sort the search result by \"Tax amount\" and it should sort it correctly",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/property_information.rb:260"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1768324000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

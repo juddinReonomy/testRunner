@@ -18,7 +18,8 @@ def index():
          'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-         '/home/ubuntu/testRunner/templates/report.html'],
+         '/home/ubuntu/testRunner/templates/report.html -f pretty -f json -o '
+         '/home/ubuntu/testRunner/templates/json_report.json'],
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
