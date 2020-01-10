@@ -32,7 +32,7 @@ def index():
     payload = "{\"text\":\"Test started after production release. Here is the Report: " \
               "http://prd-qa.internal.reonomy.com:5000/%s_report after 10 seconds refresh browser to see progress" \
               "it should take 5+ minutes to complete. Also checkout http://prd-qa.internal.reonomy.com:5000/history " \
-              "for past result\"} " % dt_time 
+              "for past result\"} " % dt_time
     headers = {
         'Content-Type': 'application/json'
     }
@@ -107,6 +107,16 @@ def better_report():
 @app.route('/status')
 def status():
     return {"Message": "ok"}, 200
+
+
+@app.route('/')
+def root():
+    return render_template("index.html")
+
+
+@app.route('/index')
+def index():
+    return render_template("index.html")
 
 
 @app.route('/<string:page_name>/')
