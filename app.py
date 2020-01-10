@@ -4,11 +4,12 @@ import requests
 import flask
 import subprocess
 from datetime import datetime
+from pytz import timezone
 import os
 
 app = flask.Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-now = datetime.now()
+now = datetime.now(timezone('US/Eastern'))
 dt_time = now.strftime("%B-%d-%Y_%I-%M-%p")
 
 
@@ -28,9 +29,9 @@ def index():
         stderr=subprocess.PIPE
     )
     # slack message send
-    payload = "{\"text\":\"Test started after production release Check Report: " \
-              "http://prd-qa.internal.reonomy.com:5000/%s_report or " \
-              "http://prd-qa.internal.reonomy.com:5000/better_report after 6 Minutes\"} " % dt_time
+    payload = "{\"text\":\"Test started after production release. Here is the Report: " \
+              "http://prd-qa.internal.reonomy.com:5000/%s_report after 10 seconds refresh browser to see progress" \
+              "it should take 5+ minutes to complete\"} " % dt_time
     headers = {
         'Content-Type': 'application/json'
     }
