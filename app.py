@@ -22,7 +22,7 @@ def index():
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
          '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
-         '/home/ubuntu/testRunner/templates/json_report.json'],
+         '/home/ubuntu/testRunner/templates/json_report.json' % dt_time],
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
