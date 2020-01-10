@@ -43,9 +43,11 @@ def smoke_manual_visit():
             ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
              '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
-             'install; cd /home/ubuntu/visage/acceptance_tests/; bundle exec cucumber TEST_ENV=prod '
+             'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
+             'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-             '/home/ubuntu/testRunner/templates/report.html'],
+             '/home/ubuntu/testRunner/templates/report.html -f pretty -f json -o '
+             '/home/ubuntu/testRunner/templates/json_report.json'],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
