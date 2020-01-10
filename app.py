@@ -3,6 +3,7 @@ from gevent.select import select
 import requests
 import flask
 import subprocess
+import os
 
 app = flask.Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -14,7 +15,7 @@ def index():
         ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
          '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
          '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
-         'install; cd /home/ubuntu/visage/acceptance_tests/;rm /home/ubuntu/testRunner/templates/report.html; bundle '
+         'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
          '/home/ubuntu/testRunner/templates/report.html'],
@@ -24,7 +25,8 @@ def index():
     )
     # slack message send
     payload = "{\"text\":\"Test started after production release Check Report: " \
-              "http://prd-qa.internal.reonomy.com:5000/report after 6 Minutes\"} "
+              "http://prd-qa.internal.reonomy.com:5000/report or " \
+              "http://prd-qa.internal.reonomy.com:5000/better_report after 6 Minutes\"} "
     headers = {
         'Content-Type': 'application/json'
     }
@@ -85,6 +87,12 @@ def smoke_manual_visit():
 @app.route('/report', methods=['GET'])
 def report():
     return render_template("report.html")
+
+
+@app.route('/better_report', methods=['GET'])
+def better_report():
+    os.system('ruby ruby_script_for_report.rb')
+    return render_template("my_test_report.html")
 
 
 @app.route('/status')
