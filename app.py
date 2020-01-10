@@ -119,9 +119,10 @@ def homepage():
     list_of_files = {}
 
     for filename in os.listdir(path):
-        if filename.endswith('.html'):
-            list_of_files[filename] = "http://prd-qa.internal.reonomy.com:5000/" + filename
-    # return list_of_files
+        if not filename.startswith("index"):
+            if filename.endswith('.html'):
+                list_of_files[filename] = "http://prd-qa.internal.reonomy.com:5000/" + filename
+        # return list_of_files
     return render_template('index.html', list_of_files=list_of_files)
 
 
