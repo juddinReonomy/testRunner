@@ -3,10 +3,12 @@ from gevent.select import select
 import requests
 import flask
 import subprocess
+from datetime import datetime
 import os
 
 app = flask.Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+file_time = datetime.now().strftime("%Y-%m-%d_%I-%M-%S_%p")
 
 
 @app.route('/prod-smoke')
@@ -18,7 +20,7 @@ def index():
          'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-         '/home/ubuntu/testRunner/templates/report.html -f pretty -f json -o '
+         '/home/ubuntu/testRunner/templates/<%= Time.now.strftime("%Y%m%d-%H%M%S") %>-report.html -f pretty -f json -o '
          '/home/ubuntu/testRunner/templates/json_report.json'],
         shell=True,
         stdout=subprocess.PIPE,
@@ -46,7 +48,8 @@ def smoke_manual_visit():
              'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
              'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-             '/home/ubuntu/testRunner/templates/report.html -f pretty -f json -o '
+             '/home/ubuntu/testRunner/templates/<%= Time.now.strftime("%Y%m%d-%H%M%S") %>-report.html -f pretty -f '
+             'json -o '
              '/home/ubuntu/testRunner/templates/json_report.json'],
             shell=True,
             stdout=subprocess.PIPE,
@@ -101,6 +104,23 @@ def better_report():
 @app.route('/status')
 def status():
     return {"Message": "ok"}, 200
+
+
+@app.route('/<string:page_name>/')
+def render_static(page_name):
+    return render_template('%s.html' % page_name)
+
+
+@app.route('/history')
+def homepage():
+    path = os.getcwd() + "/templates"
+    list_of_files = {}
+
+    for filename in os.listdir(path):
+        if filename.endswith('.html'):
+            list_of_files[filename] = "http://prd-qa.internal.reonomy.com:5000/" + filename
+    # return list_of_files
+    return render_template('index.html', list_of_files=list_of_files)
 
 
 if __name__ == "__main__":

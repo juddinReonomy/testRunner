@@ -1,0 +1,8 @@
+<div class="content-section">
+    <h3>History of Test run</h3>
+    <ul class="list-group">
+        {% for key, value in list_of_files.items() %}
+        <li><a href="{{ value.split('.html', 1)[0] }}">{{ key.split('.html', 1)[0] }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
