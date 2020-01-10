@@ -92,7 +92,7 @@ def report():
 
 @app.route('/better_report', methods=['GET'])
 def better_report():
-    os.system('ruby ruby_script_for_report.rb')
+    os.system('ruby /home/ubuntu/testRunner/ruby_script_for_report.rb')
     return render_template("my_test_report.html")
 
 
