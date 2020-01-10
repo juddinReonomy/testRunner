@@ -5,6 +5,7 @@ import flask
 import subprocess
 
 app = flask.Flask(__name__)
+app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 
 @app.route('/prod-smoke')
@@ -81,7 +82,7 @@ def smoke_manual_visit():
     return flask.Response(inner(), mimetype='text/html')
 
 
-@app.route('/report')
+@app.route('/report', methods=['GET'])
 def report():
     return render_template("report.html")
 
