@@ -31,7 +31,8 @@ def index():
     # slack message send
     payload = "{\"text\":\"Test started after production release. Here is the Report: " \
               "http://prd-qa.internal.reonomy.com:5000/%s_report after 10 seconds refresh browser to see progress" \
-              "it should take 5+ minutes to complete\"} " % dt_time
+              "it should take 5+ minutes to complete. Also checkout http://prd-qa.internal.reonomy.com:5000/history " \
+              "for past result\"} " % dt_time 
     headers = {
         'Content-Type': 'application/json'
     }
