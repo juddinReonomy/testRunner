@@ -8,7 +8,8 @@ import os
 
 app = flask.Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-file_time = datetime.now().strftime("%Y-%m-%d_%I-%M-%S_%p")
+now = datetime.now()
+dt_time = now.strftime("%B-%d-%Y_%I-%M-%p")
 
 
 @app.route('/prod-smoke')
@@ -20,7 +21,7 @@ def index():
          'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-         '/home/ubuntu/testRunner/templates/<%= Time.now.strftime("%Y%m%d-%H%M%S") %>-report.html -f pretty -f json -o '
+         '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
          '/home/ubuntu/testRunner/templates/json_report.json'],
         shell=True,
         stdout=subprocess.PIPE,
@@ -41,8 +42,6 @@ def index():
 @app.route('/prod-smoke_manual_visit')
 def smoke_manual_visit():
     def inner():
-        now = datetime.now()
-        dt_time = now.strftime("%d_%m_%Y_%H_%M_%S")
         proc = subprocess.Popen(
             ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
@@ -50,7 +49,7 @@ def smoke_manual_visit():
              'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
              'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-             '/home/ubuntu/testRunner/templates/"%s"-report.html -f pretty -f '
+             '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f '
              'json -o '
              '/home/ubuntu/testRunner/templates/json_report.json' % dt_time],
             shell=True,
