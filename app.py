@@ -42,7 +42,7 @@ def index():
 def smoke_manual_visit():
     def inner():
         now = datetime.now()
-        s = now.strftime("%d/%m/%Y %H:%M:%S")
+        dt_time = now.strftime("%d/%m/%Y %H:%M:%S")
         proc = subprocess.Popen(
             ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
@@ -50,9 +50,9 @@ def smoke_manual_visit():
              'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
              'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-             '/home/ubuntu/testRunner/templates/%s-report.html -f pretty -f '
+             '/home/ubuntu/testRunner/templates/"%s"-report.html -f pretty -f '
              'json -o '
-             '/home/ubuntu/testRunner/templates/json_report.json' % s],
+             '/home/ubuntu/testRunner/templates/json_report.json' % dt_time],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
