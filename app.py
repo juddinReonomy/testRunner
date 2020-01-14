@@ -9,12 +9,12 @@ import os
 
 app = flask.Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-now = datetime.now(timezone('US/Eastern'))
-dt_time = now.strftime("%B-%d-%Y_%I-%M-%p")
 
 
 @app.route('/prod-smoke')
 def index():
+    nowi = datetime.now(timezone('US/Eastern'))
+    dt_timei = nowi.strftime("%B-%d-%Y_%I-%M-%S-%p")
     proc = subprocess.Popen(
         ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
          '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
@@ -23,7 +23,7 @@ def index():
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
          '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
-         '/home/ubuntu/testRunner/templates/json_report.json' % dt_time],
+         '/home/ubuntu/testRunner/templates/json_report.json' % dt_timei],
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
@@ -32,7 +32,7 @@ def index():
     payload = "{\"text\":\"Test started after production release. Here is the Report: " \
               "http://prd-qa.internal.reonomy.com:5000/%s_report after 10 seconds refresh browser to see progress " \
               "it should take 5+ minutes to complete. Also checkout http://prd-qa.internal.reonomy.com:5000/history " \
-              "for past result\"} " % dt_time
+              "for past result\"} " % dt_timei
     headers = {
         'Content-Type': 'application/json'
     }
@@ -44,6 +44,8 @@ def index():
 @app.route('/prod-smoke_manual_visit')
 def smoke_manual_visit():
     def inner():
+        nowin = datetime.now(timezone('US/Eastern'))
+        dt_timein = nowin.strftime("%B-%d-%Y_%I-%M-%S-%p")
         proc = subprocess.Popen(
             ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
@@ -52,7 +54,7 @@ def smoke_manual_visit():
              'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
              '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
-             '/home/ubuntu/testRunner/templates/json_report.json' % dt_time],
+             '/home/ubuntu/testRunner/templates/json_report.json' % dt_timein],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
@@ -105,7 +107,9 @@ def better_report():
 
 @app.route('/status')
 def status():
-    return {"Message": "ok"}, 200
+    nows = datetime.now(timezone('US/Eastern'))
+    dt_times = nows.strftime("%B-%d-%Y_%I-%M-%S-%p")
+    return {"Message": "ok " + dt_times}, 200
 
 
 @app.route('/<string:page_name>/')
