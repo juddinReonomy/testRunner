@@ -119,6 +119,12 @@ def render_static(page_name):
 
 @app.route('/history')
 def homepage():
+    procs = subprocess.Popen(
+        ['find /home/ubuntu/testRunner/templates/ -name "*_report.html" -type f -mtime +5 -delete'],
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
     path = os.getcwd() + "/templates"
     list_of_files = {}
 
