@@ -4,19 +4,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/icons8-search-64.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#id01 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#id01 li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#id01 li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+
+    </style>
+
 </head>
 
 <body>
 <div class="content-section">
-    <div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="text-center" style="margin-bottom:0">
         <h1>Reonomy production test report</h1>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for cucumber report names.."
+               title="Type in a name">
+
         <p>Please click on the links below to view cucumber report.</p>
     </div>
+
     <div class="content">
-        <ul class="list-group nav nav-pills nav-stacked">
+        <ul id="id01" class="list-group">
             {% for key, value in list_of_files.items() %}
             <ol>
-                <li class="list-group-item list-group-item-success" data-toggle="tooltip" data-placement="right"
+                <li class="" data-toggle="tooltip" data-placement="right"
                     title="click on this link to see report"><a href="{{ value.split('.html', 1)[0] }}">{{
                     key.split('.html', 1)[0]
                     }}</a></li>
@@ -26,9 +71,82 @@
     </div>
 </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-    <p>Reonomy</p>
+<div class="text-center" style="margin-bottom:0">
+    <p>End of Page</p>
 </div>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("id01");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
+
+</script>
+
+
+<script>
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+
+
+
+
+</script>
+
+<script>
+window.onload = function() {
+  sortList();
+};
+
+
+
+</script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
