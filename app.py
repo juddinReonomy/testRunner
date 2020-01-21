@@ -119,8 +119,9 @@ def render_static(page_name):
 
 @app.route('/history')
 def homepage():
+    # delete files older than 7 days
     procs = subprocess.Popen(
-        ['find /home/ubuntu/testRunner/templates/ -name "*_report.html" -type f -mtime +5 -delete'],
+        ['find /home/ubuntu/testRunner/templates/ -name "*_report.html" -type f -mtime +7 -delete'],
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
