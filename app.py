@@ -16,7 +16,7 @@ def index():
     nowi = datetime.now(timezone('US/Eastern'))
     dt_timei = nowi.strftime("%B-%d-%Y_%I-%M-%S-%p")
     proc = subprocess.Popen(
-        ['cd /home/ubuntu/acceptance_tests/; gem install bundler; echo "acceptance_tests - pulling from master.."; '
+        ['cd /home/ubuntu/acceptance_tests/;echo "acceptance_tests - pulling from master.."; '
          'git pull; cd '
          '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
          '/home/ubuntu/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
