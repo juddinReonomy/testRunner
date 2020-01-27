@@ -16,7 +16,8 @@ def index():
     nowi = datetime.now(timezone('US/Eastern'))
     dt_timei = nowi.strftime("%B-%d-%Y_%I-%M-%S-%p")
     proc = subprocess.Popen(
-        ['cd /home/ubuntu/acceptance_tests/; echo "acceptance_tests - pulling from master.."; git pull; cd '
+        ['cd /home/ubuntu/acceptance_tests/; gem install bundler; echo "acceptance_tests - pulling from master.."; '
+         'git pull; cd '
          '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
          '/home/ubuntu/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
          'install; cd /home/ubuntu/acceptance_tests/; bundle '
@@ -39,7 +40,7 @@ def index():
     response = requests.request('POST', 'provide_webwook_url',
                                 headers=headers, data=payload)
     return "Production post validation test is running...check slack channel #prod-tests or click this link " \
-           "http://prd-qa.internal.reonomy.com:5000/%s_report " % dt_timei
+           "http://prd-qa.internal.reonomy.com:5000/%s_report" % dt_timei
 
 
 @app.route('/prod-smoke_manual_visit')
