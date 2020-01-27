@@ -39,8 +39,7 @@ def index():
     }
     response = requests.request('POST', 'provide_webwook_url',
                                 headers=headers, data=payload)
-    return "Production post validation test is running...check slack channel #prod-tests or click this link " \
-           "http://prd-qa.internal.reonomy.com:5000/%s_report" % dt_timei
+    return "Production post validation test is running...check slack channel #prod-tests"
 
 
 @app.route('/prod-smoke_manual_visit')
