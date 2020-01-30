@@ -24,8 +24,6 @@ def index():
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
          '/home/ubuntu/testRunner/templates/"%s"_report.html' % dt_timei],
         shell=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
     )
     # slack message send
     payload = "{\"text\":\"Test started after production release. Here is the Report: " \
