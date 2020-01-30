@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, send_from_directory
 from gevent.select import select
 import requests
 import flask
@@ -116,6 +116,12 @@ def status():
 @app.route('/<string:page_name>/')
 def render_static(page_name):
     return render_template('%s.html' % page_name)
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route('/history')
