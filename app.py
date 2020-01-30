@@ -22,12 +22,10 @@ def index():
          'install; cd /home/ubuntu/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-         '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
-         '/home/ubuntu/testRunner/templates/json_report.json' % dt_timei],
+         '/home/ubuntu/testRunner/templates/"%s"_report.html' % dt_timei],
         shell=True,
         stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        close_fds=True
+        stderr=subprocess.PIPE
     )
     # slack message send
     payload = "{\"text\":\"Test started after production release. Here is the Report: " \
@@ -55,8 +53,7 @@ def smoke_manual_visit():
              'install; cd /home/ubuntu/acceptance_tests/; bundle '
              'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
-             '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
-             '/home/ubuntu/testRunner/templates/json_report.json' % dt_timein],
+             '/home/ubuntu/testRunner/templates/"%s"_report.html' % dt_timein],
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
