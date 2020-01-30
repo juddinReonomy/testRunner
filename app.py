@@ -16,10 +16,11 @@ def index():
     nowi = datetime.now(timezone('US/Eastern'))
     dt_timei = nowi.strftime("%B-%d-%Y_%I-%M-%S-%p")
     proc = subprocess.Popen(
-        ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
+        ['cd /home/ubuntu/acceptance_tests/;echo "acceptance_tests - pulling from master.."; '
+         'git pull; cd '
          '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
-         '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
-         'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
+         '/home/ubuntu/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
+         'install; cd /home/ubuntu/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
          'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
          '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
@@ -38,7 +39,8 @@ def index():
     }
     response = requests.request('POST', 'provide_webwook_url',
                                 headers=headers, data=payload)
-    return "Production post validation test is running...check slack channel #prod-tests"
+    return "Production post validation test is running...check slack channel #prod-tests or click this link " \
+           "http://prd-qa.internal.reonomy.com:5000/%s_report" % dt_timei
 
 
 @app.route('/prod-smoke_manual_visit')
@@ -47,10 +49,10 @@ def smoke_manual_visit():
         nowin = datetime.now(timezone('US/Eastern'))
         dt_timein = nowin.strftime("%B-%d-%Y_%I-%M-%S-%p")
         proc = subprocess.Popen(
-            ['cd /home/ubuntu/visage/acceptance_tests/; echo "vistage - pulling from master.."; git pull; cd '
+            ['cd /home/ubuntu/acceptance_tests/; echo "acceptance_tests - pulling from master.."; git pull; cd '
              '/home/ubuntu/testRunner; echo "testRunner - pull from master.."; git pull; cd '
-             '/home/ubuntu/visage/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
-             'install; cd /home/ubuntu/visage/acceptance_tests/; bundle '
+             '/home/ubuntu/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
+             'install; cd /home/ubuntu/acceptance_tests/; bundle '
              'exec cucumber TEST_ENV=prod '
              'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
              '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
