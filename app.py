@@ -26,7 +26,8 @@ def index():
          '/home/ubuntu/testRunner/templates/json_report.json' % dt_timei],
         shell=True,
         stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
+        stderr=subprocess.PIPE,
+        timeout=1500
     )
     # slack message send
     payload = "{\"text\":\"Test started after production release. Here is the Report: " \
