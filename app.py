@@ -21,7 +21,7 @@ def index():
          '/home/ubuntu/acceptance_tests; echo "acceptance_tests - updating all dependencies.."; bundle '
          'install; cd /home/ubuntu/acceptance_tests/; bundle '
          'exec cucumber TEST_ENV=prod '
-         'BROWSER=headless-chrome --tags @profile -f pretty -f html -o '
+         'BROWSER=headless-chrome --tags @production -f pretty -f html -o '
          '/home/ubuntu/testRunner/templates/"%s"_report.html -f pretty -f json -o '
          '/home/ubuntu/testRunner/templates/json_report.json' % dt_timei],
         shell=True,
@@ -40,17 +40,6 @@ def index():
                                 headers=headers, data=payload)
     return "Production post validation test is running...check slack channel #prod-tests or click this link " \
            "http://prd-qa.internal.reonomy.com:5000/%s_report" % dt_timei
-
-    ret_code = proc.wait()
-    print
-    "process return code:", ret_code
-    # slack message send
-    payload = "{\"text\":\"Test Completed return code: %s\"}" % ret_code
-    headers = {
-        'Content-Type': 'application/json'
-    }
-    response = requests.request('POST', 'provide_webwook_url',
-                                headers=headers, data=payload)
 
 
 @app.route('/prod-smoke_manual_visit')
