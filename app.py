@@ -27,8 +27,10 @@ def index():
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        timeout=1500
     )
+    print
+    "Running the tests running ..."
+    proc.communicate()  # now wait plus that you can send commands to process
     # slack message send
     payload = "{\"text\":\"Test started after production release. Here is the Report: " \
               "http://prd-qa.internal.reonomy.com:5000/%s_report after 10 seconds refresh browser to see progress " \
